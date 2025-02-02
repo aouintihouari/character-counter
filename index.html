@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Character counter</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div class="logo">
+          <img
+            class="logo__icon"
+            src="assets/images/logo-light-theme.svg"
+            alt="logo-icon"
+          />
+        </div>
+        <div class="toggle-mode">
+          <img
+            class="toggle-mode__icon"
+            src="assets/images/icon-moon.svg"
+            alt="toggle-mode-icon"
+          />
+        </div>
+      </header>
+      <h1 class="heading text-preset-1">Analyze your text in real-time.</h1>
+      <section>
+        <textarea
+          class="textarea-custom text-preset-3"
+          id="textarea-custom"
+          placeholder="Start typing here… (or paste your text)"
+        ></textarea>
+        <p class="info text-preset-4">
+          <img
+            class="icon-info"
+            src="assets/images/icon-info.svg"
+            alt="icon-info"
+          />
+          Limit reached! Your text exceeds&nbsp;
+          <span class="max-characters"> </span>&nbsp; characters.
+        </p>
+      </section>
+      <section class="options">
+        <div>
+          <label class="option text-preset-4" for="exclude-spaces"
+            ><input
+              class="box"
+              type="checkbox"
+              name="exclude-spaces"
+              id="exclude-spaces"
+            />Exclude Spaces</label
+          >
+          <label class="option text-preset-4" for="character-limit"
+            ><input
+              class="box"
+              type="checkbox"
+              name="character-limit"
+              id="character-limit"
+            />Set Character Limit</label
+          >
+          <input class="character-limit__input" type="text" />
+        </div>
+        <div class="reading-time text-preset-4">
+          Approx. reading time:&nbsp;
+          <span class="reading-time__counter">0 </span>&nbsp; minute
+        </div>
+      </section>
+      <section class="counter__container">
+        <div class="counter__element counter__element-purple">
+          <h2 class="counter__title counter__characters text-preset-1">00</h2>
+          <p class="counter__sub-title text-preset-3">
+            Total Characters
+            <span class="counter__sub-title-spaces"></span>
+          </p>
+        </div>
+        <div class="counter__element counter__element-yellow">
+          <h2 class="counter__title counter__words text-preset-1">00</h2>
+          <p class="counter__sub-title text-preset-3">Word Count</p>
+        </div>
+        <div class="counter__element counter__element-orange">
+          <h2 class="counter__title counter__sentences text-preset-1">00</h2>
+          <p class="counter__sub-title text-preset-3">Sentence Count</p>
+        </div>
+      </section>
+      <section class="counter__letters">
+        <h2 class="letter-density__title text-preset-2">Letter Density</h2>
+        <section>
+          <p class="no-characters text-preset-4">
+            No characters found. Start typing to see letter density.
+          </p>
+          <section class="density__container"></section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
